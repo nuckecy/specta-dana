@@ -1,0 +1,223 @@
+#element-12  
+{
+    height: 488px;
+    width: 668px;
+    left: 147px;
+    top: 323px;
+    z-index: 3;
+}
+
+#element-12 img 
+{
+    width: 668px;
+    height: 488px;
+}
+
+#element-11  
+{
+    height: 633px;
+    width: 628px;
+    left: 167px;
+    top: 144px;
+    z-index: 4;
+}
+
+#element-9  
+{
+    height: 278px;
+    width: 393px;
+    left: 284px;
+    top: 499px;
+    z-index: 5;
+}
+
+#element-9 img 
+{
+    width: 393px;
+    height: 278px;
+}
+
+#element-6  
+{
+    height: 48px;
+    width: 220px;
+    left: 371px;
+    top: 458px;
+    z-index: 6;
+}
+
+#element-1  
+{
+    height: 27px;
+    width: 590px;
+    left: 190px;
+    top: 264px;
+    z-index: 7;
+}
+
+#element-1 p, #element-1 ul, #element-1 ol, #element-1 h1 
+{
+    font-size: 17px;
+    color: rgb(150, 150, 150);
+    line-height: 27px;
+    text-align: center;
+}
+
+#element-5  
+{
+    height: 88px;
+    width: 612px;
+    left: 175px;
+    top: 164px;
+    z-index: 8;
+}
+
+#element-5 p, #element-5 ul, #element-5 ol, #element-5 h1 
+{
+    font-size: 63px;
+    color: rgb(0, 0, 0);
+    line-height: 88px;
+    text-align: center;
+}
+
+#element-15  
+{
+    height: 79px;
+    width: 79px;
+    left: 740px;
+    top: 71px;
+    z-index: 9;
+}
+
+#element-15 img 
+{
+    width: 79px;
+    height: 79px;
+}
+
+#element-16  
+{
+    height: 39px;
+    width: 49px;
+    left: 755px;
+    top: 90px;
+    z-index: 10;
+}
+
+#element-16 p, #element-16 ul, #element-16 ol, #element-16 h1 
+{
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+    line-height: 39px;
+    text-align: center;
+}
+
+#element-19  
+{
+    height: 38px;
+    width: 590px;
+    left: 186px;
+    top: 293px;
+    z-index: 11;
+}
+
+#element-19 p, #element-19 ul, #element-19 ol, #element-19 h1 
+{
+    font-size: 24px;
+    color: rgb(150, 150, 150);
+    line-height: 38px;
+    text-align: center;
+}
+
+#element-20  
+{
+    height: 81px;
+    width: 590px;
+    left: 197px;
+    top: 320px;
+    z-index: 12;
+}
+
+#element-20 p, #element-20 ul, #element-20 ol, #element-20 h1 
+{
+    font-size: 17px;
+    color: rgb(150, 150, 150);
+    line-height: 27px;
+    text-align: center;
+}
+
+
+#page_block_below_fold { height: 888px; }
+#page_block_below_fold .border-holder
+{
+    background-image: none;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: right center;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    width: auto;
+    border-width: 0;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    height: 888px;
+}
+
+@media only screen and (max-width: 770px) {
+    .border-holder {
+        background-attachment: scroll !important;
+    }
+}
+
+#page_block_below_fold .color-overlay
+{
+    display: none;
+}
+
+#page_block_below_fold .block-inner
+{
+    margin-top: 0px;
+    height: calc(100% + 0px);
+}
+
+@media
+screen and (min-width: 621px)  and (-webkit-max-device-pixel-ratio: 1.5),
+screen and (min-width: 1000px) and (-webkit-max-device-pixel-ratio: 1.5)
+{
+    .new_mobile .page.page2.mobile .block-inner
+    {
+        width: 960px;
+    }
+}
+
+#element-6 .dynamic-button
+{
+    color: #b40071;
+    box-sizing: border-box;
+    border: 2px solid #b40071;	
+}
+
+#element-6 .dynamic-button:hover { background-color: #ffdaf1; }
+
+#element-6 .dynamic-button, #element-6 .image-button
+{
+    width: 220px;
+    height: 48px;
+    z-index: 6;
+    line-height: 19px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Open Sans;
+    border-radius: 5px;		
+}
+
+#element-9 .cropped
+{
+    background-image: url('https://s3.eu-west-3.amazonaws.com/sbplc-specta-dana/mail.png');
+    background-position: -174px -71px;
+    width: 393px;			
+    height:278px;						
+    background-size: 760px 523px;
+}

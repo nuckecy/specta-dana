@@ -1,1 +1,1 @@
-# specta-dana
+# Specta Dana Motors Partnership

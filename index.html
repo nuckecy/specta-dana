@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- PAGE settings -->
+  <link rel="icon" href="https://www.myspecta.com/Content/assets/favicon/favicon.ico">
+  <title>Specta KIA Car Loan</title>
+  <meta name="description" content="Specta Partners with KIA to offer cars on Loan. Apply now to get a car of your choice via Specta."/>
+  <meta name="author" content="Sterling Bank Plc">
+  <meta name="theme-color" content="#64003f">
+  <meta name="robots" content="index, follow">
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+      .carousel {
+  position: relative; }
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+
+.carousel-item {
+  position: relative;
+  display: none;
+  align-items: center;
+  width: 100%;
+  transition: transform 0.6s ease;
+  backface-visibility: hidden;
+  perspective: 1000px; }
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+  display: block; }
+
+.carousel-item-next,
+.carousel-item-prev {
+  position: absolute;
+  top: 0; }
+
+.carousel-item-next.carousel-item-left,
+.carousel-item-prev.carousel-item-right {
+  transform: translateX(0); }
+  @supports (transform-style: preserve-3d) {
+    .carousel-item-next.carousel-item-left,
+    .carousel-item-prev.carousel-item-right {
+      transform: translate3d(0, 0, 0); } }
+
+.carousel-item-next,
+.active.carousel-item-right {
+  transform: translateX(100%); }
+  @supports (transform-style: preserve-3d) {
+    .carousel-item-next,
+    .active.carousel-item-right {
+      transform: translate3d(100%, 0, 0); } }
+
+.carousel-item-prev,
+.active.carousel-item-left {
+  transform: translateX(-100%); }
+  @supports (transform-style: preserve-3d) {
+    .carousel-item-prev,
+    .active.carousel-item-left {
+      transform: translate3d(-100%, 0, 0); } }
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  color: #fff;
+  text-align: center;
+  opacity: 0.5; }
+  .carousel-control-prev:hover, .carousel-control-prev:focus,
+  .carousel-control-next:hover,
+  .carousel-control-next:focus {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: .9; }
+
+.carousel-control-prev {
+  left: 0; }
+
+.carousel-control-next {
+  right: 0; }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%; }
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); }
+
+.carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin-right: 15%;
+  margin-left: 15%;
+  list-style: none; }
+  .carousel-indicators li {
+    position: relative;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    background-color: rgba(255, 255, 255, 0.5); }
+    .carousel-indicators li::before {
+      position: absolute;
+      top: -10px;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      height: 10px;
+      content: ""; }
+    .carousel-indicators li::after {
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      height: 10px;
+      content: ""; }
+  .carousel-indicators .active {
+    background-color: #fff; }
+
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 20px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center; }
+
+.form-check-inline {padding-top:5px;}
+  </style>
+  <!-- CSS dependencies -->
+  <link rel="stylesheet" href="https://s3.eu-west-3.amazonaws.com/sbplc-specta-dana/theme.css?v=1.1.2" type="text/css">
+  <link rel="stylesheet" href="https://s3.eu-west-3.amazonaws.com/sbplc-specta-dana/custom.css" type="text/css">
+</head>
+
+
+
+<body>
+  <div id="carouselArchitecture" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselArchitecture" data-slide-to="0" class="active">
+        <i></i>
+      </li>
+      <li data-target="#carouselArchitecture" data-slide-to="1">
+        <i></i>
+      </li>
+      <li data-target="#carouselArchitecture" data-slide-to="2">
+        <i></i>
+      </li>
+      <li data-target="#carouselArchitecture" data-slide-to="3">
+        <i></i>
+      </li>
+    </ol>
+    <div class="carousel-inner" id="Kiaslider" aria-label="Kiaslider" >
+      <div class="carousel-item active">
+          <img class="d-block img-fluid" src="https://s3.eu-west-3.amazonaws.com/sbplc-specta-dana/img/sc4dr_side.jpg?v=1.1.1" alt="Kia Car" data-holder-rendered="true"> </div>
+      <div class="carousel-item">
+        <img class="d-block img-fluid" src="https://s3.eu-west-3.amazonaws.com/sbplc-specta-dana/img/sc4dr_up.jpg?v=1.1.1" alt="Kia Car" data-holder-rendered="true"> </div>
+      <div class="carousel-item">
+        <img class="d-block img-fluid" src="https://s3.eu-west-3.amazonaws.com/sbplc-specta-dana/img/ud_side.jpg?v=1.1.1" alt="Kia Car" data-holder-rendered="true"> </div>
+      <div class="carousel-item">
+        <img class="d-block img-fluid" src="https://s3.eu-west-3.amazonaws.com/sbplc-specta-dana/img/sc4dr_eye.jpg?v=1.1.1" alt="Kia Car" data-holder-rendered="true"> </div>
+    </div>
+  </div>
+  <div class="filter-specta text-left py-5" style="background-image: url('https://s3.eu-west-3.amazonaws.com/sbplc-specta-dana/img/combine.jpg');background-size:cover;background-position:center center;">
+    <div class="container">
+      <div class="row">
+        <div class="align-self-center col-md-6 text-white">
+          <h1>GET YOUR CAR NOW, </h1>
+          <h3>WORRY ABOUT PAYMENT LATER.</h3>
+          <p class="text-left">With Specta, you can now get the <b>Kia Vehicle</b> you need and pay with ease and convenience! Apply now and enjoy free one-year comprehensive insurance.</p>
+          
+          <p>The details:<br>
+          <div style="margin-left: 20px;">
+            22% interest rate<br>
+            48 months maximum facility tenor<br>
+            0.5% commitment fee<br>
+            0.5% management fee<br>
+            15% minimum equity contribution only.
+            </div>
+          </p>
+          <h3>Why wait when you can start now?</h3>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body text-left p-2">
+              <h1 class="pb-3 px-2 specta-color" style="margin:0">Apply with Specta<br><span style="font-size:13px">Complete the form below to get your Eligibility</span></h1>
+
+              <div class="order-md-1 col-md-12 w-100 mx-auto">
+                <form>
+                    <div class="row">
+                      <div class="col-md-6 mb-3 col-sm-12 col-12">
+                        <label for="firstName" class="specta-color">First name
+                        <input type="text" class="form-control" id="firstName" placeholder="Your First Name" value="" required>
+                        </label>
+                      </div>
+                      <div class="col-md-6 mb-3 col-12 col-sm-12">
+                        <label for="lastName" class="specta-color">Last name
+                        <input type="text" class="form-control" id="lastName" placeholder="Your Last Name" value="" required>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="employment" class="specta-color">Employment Status
+                      <select class="custom-select d-block w-100" id="employ" required>
+                        <option value="">Choose a status</option>
+                        <option value="Employed">Employed</option>
+                        <option value="Unemployed">Unemployed</option>
+                      </select>
+                      </label>
+                    </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="gender">Gender<br>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input bg-light" type="radio" value="option1" id="inlineRadio1" name="inlineRadioOptions"> Female </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio" value="option2" id="inlineRadio2" name="inlineRadioOptions"> Male </label>
+                                    </div>
+                            </label>
+                        </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="address" class="specta-color">Address
+                    <input type="text" class="form-control" id="address" placeholder="example: 1234 Main St" required>
+                    </label>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="mobile" class="specta-color">Mobile
+                      <input type="text" class="form-control" id="mobile" placeholder="Your Mobile" value="" required>
+                      </label>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="email" class="specta-color">Email
+                      <input type="text" class="form-control" id="email" placeholder="Your Email Address" value="" required>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="car" class="specta-color">Select your Car
+                    <select class="custom-select d-block w-100" id="kia" required>
+                      <option value="">Choose a car</option>
+                      <option value="">PICANTO - Automatic - N4,950,000</option>
+                      <option value="">UB RIO - Automatic - N6,480,000</option>
+                      <option value="">UB RIO - Automatic - N7,290,000</option>
+                      <option value="">SC RIO - Automatic - N8,100,000</option>
+                      <option value="">CERATO - Automatic - N9,540,000</option>
+                      <option value="">CERATO - Automatic - N9,810,000</option>
+                      <option value="">CERATO - Automatic - N10,710,000</option>
+                      <option value="">OPTIMA - Automatic - N11,970,000</option>
+                      <option value="">OPTIMA - Automatic - N12,960,000</option>
+                      <option value="">SOUL - Automatic - N9,000,000</option>
+                      <option value="">SOUL - Automatic - N9,360,000</option>
+                      <option value="">SPORTAGE - Automatic - N13,500,000</option>
+                      <option value="">SPORTAGE - Automatic - N14,400,000</option>
+                      <option value="">SORENTO - Automatic - N16,380,000</option>
+                      <option value="">SORENTO - Automatic - N17,910,000</option>
+                      <option value="">SORENTO - Automatic - N18,720,000</option>
+                      <option value="">MOHAVE - Automatic - N18,900,000</option>
+                      <option value="">CADENZA - Automatic - N20,610,000</option>
+                      <option value="">QUORIS - Automatic - N36,900,000</option>
+                      <option value="">PICK-UP - Manual - N7,830,000</option>
+                    </select>
+                    </label>
+                  </div>
+                  <button class="btn btn-lg btn-block btn-danger mb-3" type="submit">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-dark text-white p-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mt-3 text-center">
+          <p style="font-size:12px;">© Copyright 2018 - All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  
+</body>
+</html>
